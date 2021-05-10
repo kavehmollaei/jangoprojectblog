@@ -1,29 +1,31 @@
-{% extends 'learning_logs/base.html' %}
+    {% extends 'learning_logs/base.html' %}
 
 
 {% block content %}
+
 <p> Personal INFO</p>
 <ul>
-    {% for person  in Persons  %}
+    {% for person  in fname  %}
         <li> 
-            {{person}}
+            {{ person }}
             {% empty %}
         </li>
     {% endfor %}
-    </ul>
-
-<p>
-    <h1>
-     first name of staudents
-    </h1>
-    </p>
-    
-    <ul>
-        {% for fn in fname %}
-            <li> {{fn}}</li>
-            {% empty %}
-        {% endfor %}
-        </ul>
-
+    </ul>    
 {% endblock content %}
 
+
+
+{% block content_test %}
+<p> Personal INFO</p>    
+<ul>
+    {% for number  in lname  %} 
+    <li> 
+        {{number}}
+        
+        </li>
+    {% endfor %}
+
+
+</ul>
+{% endblock content_test %}
